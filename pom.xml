@@ -40,6 +40,26 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<exclude>static/css/**/**/*</exclude>
+					<exclude>static/js/**/**/*</exclude>
+					<exclude>static/lay/**/**/*</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<includes>
+					<include>static/css/**/*</include>
+					<include>static/js/**/*</include>
+					<include>static/lay/**/*</include>
+				</includes>
+			</resource>
+		</resources>
 	</build>
 
 </project>
